@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,10 +18,14 @@ public class Party {
 	// group code
 	// name
 	
-	@Column(length = 6, nullable = false)
+	@Column(length = 6, nullable = true)
 	private String code;
 	@Column(length = 100, nullable = false)
 	private String name;
+	
+	@ManyToOne
+	private User admin;
+	
 	public int getId() {
 		return id;
 	}

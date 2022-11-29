@@ -1,4 +1,4 @@
-package nl.spotifeest.backend;
+package nl.spotifeest.backend.controller;
 
 import java.util.Date;
 
